@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <title>Job Market Platform Login</title>
+</head>
+<body>
+    <div class="container">
+        <p class="title">Choose an account type</p>
+        <div class="images-container">
+            <div class="img-item">
+                <img src="./images/img1.png" alt="recruiter">
+                <p>Recruiter</p>
+                <i class="fas fa-check"></i>
+            </div>
+            <div class="img-item selected">
+                <img src="./images/img2.png" alt="recruiter">
+                <p>Job Seeker</p>
+                <i class="fas fa-check"></i>
+            </div>
+        </div>
+
+        <p class="welcome-message">Welcome to the private area. Please, provide login credential to proceed and have access to all our services</p>
+
+        <form>
+            <div class="form-control">
+                <input type="text" placeholder="Username">
+                <i class="fas fa-user"></i>
+            </div>
+            <div class="form-control">
+                <input type="password" placeholder="Password">
+                <i class="fas fa-lock"></i>
+                <p class="forgot-password">Forgot?</p>
+            </div>
+        </form>
+
+        <div class="actions">
+            <p>Not an account? <span>Sign in</span></p>
+            <button class="submit">Login</button>
+        </div>
+    </div>
+
+    <script>
+        var items = document.querySelectorAll('.img-item');
+
+        items.forEach(item => {
+            item.addEventListener('click', function() {
+
+                /* Remove all 'selected' classes */
+                items.forEach(itemCard => itemCard.classList.remove('selected'));
+
+                /* Add 'selected' class to the clicked item */
+                this.classList.add('selected');
+            })
+        })
+    </script>
+    
+</body>
+</html>
